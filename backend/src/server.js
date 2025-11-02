@@ -1,5 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
+import { ENV } from "./lib/env.js";
+import { connectDB } from "./lib/db.js";
 import path from "path";
 
 dotenv.config();
@@ -15,7 +17,7 @@ app.get("/health", (req, res) => {
 });
 
 // make app ready for deployment
-if (process.env.NODE_ENV === "production") {
+if (ENV.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
   app.get("/{*any}", (req, res) => {
@@ -23,6 +25,15 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.listen(process.env.PORT, () =>
-  console.log(`Server running on port ${process.env.PORT}`)
-);
+const startServer = async () => {
+  try {
+    await connectDB();
+    app.listen(ENV.PORT, () =>
+      console.log("Server is running on port:", ENV.PORT)
+    );
+  } catch (error) {
+    console.error("💥 Error starting the server", error);
+  }
+};
+
+startServer();
