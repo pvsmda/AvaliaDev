@@ -7,6 +7,11 @@
 Clique na imagem para ver o vídeo
 </h2>
 <br>
+<a href="https://avaliadev-zg6to.sevalla.app/" target="__blank">
+  Aplicação na web
+</a>
+<br>
+<br>
 ✨ Highlights:
 
 - 🧑‍💻 Editor de código com tecnologia VSCode
