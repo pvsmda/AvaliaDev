@@ -1,11 +1,12 @@
 <h1 align="center">✨ AvaliaDev ✨</h1>
 
-[![Assista ao vídeo](./frontend/public/Screenshot%20From%202025-11-02%2019-01-34.png)](https://vimeo.com/1132974581?share=copy&fl=sv&fe=ci)
-
+<a href="https://vimeo.com/1132974581?share=copy&fl=sv&fe=ci" target="_blank">
+  <img src="./frontend/public/Screenshot%20From%202025-11-02%2019-01-34.png" alt="Assista ao vídeo">
+</a>
 <h2 align="center">
 Clique na imagem para ver o vídeo
 </h2>
-
+<br>
 ✨ Highlights:
 
 - 🧑‍💻 Editor de código com tecnologia VSCode
